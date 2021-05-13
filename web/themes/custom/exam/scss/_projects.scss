@@ -1,0 +1,86 @@
+@import "mixin";
+.block-views-block-projects-block-1{
+  .block-title{
+    font-weight: normal !important;
+  }
+}
+.view-projects{
+  background: repeating-linear-gradient(-60deg, #dbdbdb 0, #dbdbdb 1px, transparent 1px, transparent 5px);
+  padding-top: 50px;
+  .content{
+    text-align: center;
+    background:$white;
+    border-bottom: 1px solid #373645;
+    .block-field-blocknodeproject-title{
+      margin-top: 30px;
+      a{
+        @include view-title;
+      }
+    }
+    .field--name-field-taxonomy-project{
+      a[href*="/project/php-development"]{
+        color: #a161b9;
+      }
+      a[href*="/project/drupal-project"]{
+        color: #2baae0;
+      }
+      a[href*="/project/app-development"]{
+        color: #e84c3d;
+      }
+      a[href*="/project/web-development"]{
+        color: #1bbc9b;
+      }
+    }
+    .node-readmore{
+      @include btn;
+      background: #373645;
+      margin: 0 auto ;
+      width: 100px;
+      a{
+        color: $white;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+.pager-nav{
+  .pagination{
+    a{
+      background: none;
+      border: none;
+      color: #646464;
+      &:hover,
+      &:focus{
+        background:#dddcdd ;
+        border-radius: 50%;
+      }
+    }
+    li:hover{
+
+    }
+    .active{
+      a{
+        background:#dddcdd ;
+        border-radius: 50%;
+      }
+
+    }
+  }
+}
+@media (max-width: 1199px) {
+  .view-projects{
+    img{
+      //margin: 0 auto;
+      width: 100%;
+      height: auto;
+    }
+  }
+  .col-pro{
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 991px){
+  .col-pro{
+    padding: 0 70px;
+  }
+}

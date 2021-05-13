@@ -1,0 +1,69 @@
+{% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
+{# Navbar #}
+{% if page.navigation or page.navigation_collapsible %}
+  {% block navbar %}
+    {%
+      set navbar_classes = [
+      'navbar',
+      theme.settings.navbar_inverse ? 'navbar-inverse' : 'navbar-default',
+      theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : container,
+    ]
+    %}
+    <header id="navbar" role="banner">
+      {% if not navbar_attributes.hasClass(container) %}
+      <div class="{{ container }}">
+        {% endif %}
+        <div class="navbar-header">
+          {{ page.navigation }}
+          {# .btn-navbar is used as the toggle for collapsed navbar content #}
+          {% if page.navigation_collapsible %}
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+              <span class="sr-only">{{ 'Toggle navigation'|t }}</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          {% endif %}
+        </div>
+
+        {# Navigation (collapsible) #}
+        {% if page.navigation_collapsible %}
+          <div id="navbar-collapse" class="navbar-collapse collapse">
+            {{ page.navigation_collapsible }}
+          </div>
+        {% endif %}
+        {% if not navbar_attributes.hasClass(container) %}
+      </div>
+      <div class="container">
+        <div class="text__header">
+          {{ page.texthead }}
+        </div>
+      </div>
+      {% endif %}
+
+    </header>
+  {% endblock %}
+{% endif %}
+
+<main role="main">
+  <div class="layout-content container" >
+    {{ page.content }}
+  </div>
+</main>
+<section class="contf container">
+  <div class="left">
+    {{ page.left }}
+  </div>
+  <div class="right">
+    {{ page.right }}
+  </div>
+</section>
+
+{% if page.footer %}
+  <footer role="contentinfo">
+    <div class="container">
+      {{ page.footer }}
+    </div>
+
+  </footer>
+{% endif %}

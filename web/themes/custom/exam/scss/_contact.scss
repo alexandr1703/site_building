@@ -1,0 +1,81 @@
+@import "mixin";
+.webform-button--submit{
+  background: #e84c3d;
+  outline: none;
+  display: block;
+  border: none;
+  padding: 15px 25px;
+  margin-bottom: 100px;
+  &:hover{
+    background: #e53b29;
+  }
+}
+.contf{
+  display: flex;
+  .left{
+    width: 50%;
+  }
+  .right{
+    width: 50%;
+  }
+}
+.form-item{
+  margin-right: 20px;
+  input{
+    padding: 25px 10px 25px 10px;
+  }
+  textarea{
+    resize: none;
+    padding: 15px 10px 25px 10px;
+    height: 205px;
+  }
+}
+.map{
+  .block-field-blocknodemaptitle{
+    font-weight: bold;
+    font-size: 17px;
+    margin-bottom: 6px;
+  }
+  .block-field-blocknodemapbody{
+    line-height: 15px;
+    margin-bottom: 40px;
+  }
+}
+#block-contacttitle{
+  text-align: center;
+  margin-bottom: 40px;
+  h2{
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 0;
+    &:after{
+      content: " ";
+      display: inline-block;
+      vertical-align: middle;
+      width: 55px;
+      height: 3px;
+      background-color: $gray;
+      position: relative;
+      top: 20px;
+      left: -92px;
+
+    }
+  }
+}
+@media (max-width:991px ){
+  .contf{
+    flex-direction: column;
+    .left{
+      width: 100%;
+    }
+    .right{
+      width: 100%;
+    }
+  }
+  .webform-button--submit{
+    margin-bottom: 30px;
+  }
+  .map{
+    text-align: center;
+  }
+}

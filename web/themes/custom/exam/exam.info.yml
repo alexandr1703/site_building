@@ -1,0 +1,24 @@
+type: theme
+base theme: bootstrap
+core: 8.x
+core_version_requirement: ^8 || ^9
+
+name: 'exam'
+description: 'A Drupal Bootstrap 3 based sub-theme.'
+package: 'Bootstrap'
+
+regions:
+  navigation: 'Navigation'
+  navigation_collapsible: 'Navigation (Collapsible)'
+  texthead: 'Header Text'
+  content: 'Content'
+  footer: 'Footer'
+  left: 'left site'
+  right: 'right site'
+
+#  page_top: 'Page top'
+#  page_bottom: 'Page bottom'
+
+libraries-extend:
+  bootstrap/framework:
+    - exam/framework

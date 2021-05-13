@@ -1,0 +1,51 @@
+@import "mixin";
+.view-our-team{
+  margin-top: 32px;
+  text-align: center;
+  .block-field-blocknodeteamtitle{
+    margin-top: 37px;
+    line-height: 27px;
+    a{
+      font-size: 24px;
+      color: $maintxt;
+    }
+  }
+  .field--name-field-profession{
+    color: #d3d3d3;
+    font-size: 12px;
+    margin-bottom: 13px;
+  }
+  .field--name-field-team-link{
+    @include btn;
+    background: #373645;
+    margin: 0 auto 21px;
+    width: 100px;
+    a{
+      color: $white;
+    }
+  }
+}
+.flag{
+  a:hover{
+    text-decoration: none;
+  }
+}
+@media (max-width: 1199px){
+  .view-our-team{
+    margin-top: 0;
+    .block-field-blocknodeteamtitle {
+      margin-top: 20px;
+      line-height: 25px;
+    }
+    .field--name-field-profession{
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+    img{
+      margin: 32px auto 0;
+    }
+    .layout--twocol-section > .layout__region{
+     flex: 0 1 50%;
+    }
+  }
+}

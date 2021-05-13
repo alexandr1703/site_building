@@ -1,0 +1,6 @@
+@import "mixin", "header", "about", "services", "projects", "team", 'news', 'footer';
+.view-content{
+  h2{
+    display: none;
+  }
+}

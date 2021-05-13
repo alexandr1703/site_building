@@ -1,0 +1,40 @@
+{
+
+  "dependencies": {
+
+    "bootstrap-sass": "^3.4.1",
+
+    "browser-sync": "*",
+
+    "gulp": "3.9.1",
+
+    "gulp-autoprefixer": "*",
+
+    "gulp-beautify": "*",
+
+    "gulp-concat": "*",
+
+    "gulp-imagemin": "*",
+
+    "gulp-jshint": "*",
+
+    "gulp-load-plugins": "*",
+
+    "gulp-notify": "*",
+
+    "gulp-sass": "*",
+
+    "gulp-shell": "*",
+
+    "gulp-sourcemaps": "*",
+
+    "gulp-uglify": "*",
+
+    "jshint": "*",
+
+    "main-bower-files": "*"
+
+  }
+
+}
+

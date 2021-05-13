@@ -1,0 +1,13 @@
+@import "mixin";
+footer{
+  background: $maintxt;
+  .region-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+#block-logo-2{
+  @include logo;
+  padding-left: 0;
+}

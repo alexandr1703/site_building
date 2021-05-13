@@ -1,0 +1,43 @@
+$gray:#cccccc;
+$white:#fff;
+$maintxt:#373645;
+@mixin head(){
+  color: #373645;
+  font-size: 30px;
+  font-weight: bold;
+}
+@mixin btn(){
+  background: #6e9bca;
+  color: #fff;
+  display: block;
+  width: 120px;
+  height: 30px;
+  text-align: center;
+  padding-top: 8px;
+}
+.social-media-links--platforms{
+  li{
+    background: #6e9bca;
+    a{
+      color: white;
+
+    }
+  }
+}
+@mixin view_title(){
+  color: #373645;
+  font-size: 22px;
+  line-height: 10px;
+}
+@mixin logo(){
+  background-color: $maintxt;
+  padding: 19px 48px 30px;
+  h4{
+    color: #6e9bca;
+    font-size: 33px;
+    margin-bottom: 0px;
+  }
+  p{
+    color:#cac9cd;
+  }
+}

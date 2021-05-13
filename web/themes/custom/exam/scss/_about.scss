@@ -1,0 +1,39 @@
+@import "mixin";
+#block-aboutblock{
+  .field{
+    display: flex;
+    align-items: center;
+  }
+  border-bottom: 5px solid #6e9bca;
+  border-top: 5px solid black;
+  margin: 70px 0;
+  h4{
+    @include head;
+    margin-right: 30px;
+  }
+  h6{
+    color: #ccc;
+    text-align: center;
+    font-size: 19px;
+  }
+  p{
+    display: block;
+    margin-left: 50px;
+    a{
+      @include btn;
+    }
+  }
+
+}
+@media (max-width: 991px){
+  #block-aboutblock {
+    margin: 40px 0;
+    .field {
+      display: flex;
+      flex-direction: column;
+    }
+    p{
+      margin: 0px 0px 17px 0;
+    }
+  }
+}
